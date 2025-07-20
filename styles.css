@@ -1,0 +1,375 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #1f1f1f;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo h2 {
+    color: #0d47a1;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu .nav-link {
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu .nav-link:hover {
+    color: #0d47a1;
+}
+
+/* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, #dde5f7, #c3d0f0);
+            min-height: 80vh;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        /* Styling untuk foto profil yang bagus */
+        .hero-profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            /* Border bergradasi */
+            border: 5px solid transparent;
+            background: linear-gradient(45deg, #0d47a1, #5c6bc0, #0d47a1);
+            background-clip: padding-box;
+            padding: 5px;
+            /* Shadow berlapis untuk efek depth */
+            box-shadow: 
+                0 0 0 3px rgba(13, 71, 161, 0.1),
+                0 8px 25px rgba(13, 71, 161, 0.3),
+                0 15px 35px rgba(0, 0, 0, 0.1);
+            /* Animasi dan transisi */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efek hover untuk foto profil */
+        .hero-profile:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 
+                0 0 0 5px rgba(13, 71, 161, 0.2),
+                0 12px 35px rgba(13, 71, 161, 0.4),
+                0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Background circle untuk efek tambahan */
+        .hero-profile::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(13, 71, 161, 0.1), rgba(92, 107, 192, 0.1));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-profile:hover::before {
+            opacity: 1;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #0d47a1, #5c6bc0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons .btn {
+            padding: 0.7rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            border-radius: 30px;
+            transition: background 0.3s, transform 0.3s;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #0d47a1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #08306b;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #0d47a1;
+            border: 2px solid #0d47a1;
+        }
+
+        .btn-secondary:hover {
+            background: #0d47a1;
+            color: white;
+            transform: scale(1.05);
+        }
+
+
+/* Sections */
+section {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d47a1;
+}
+
+.stat-label {
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #0d47a1;
+    margin-bottom: 0.5rem;
+}
+
+.edu-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.edu-subtitle {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.edu-year {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+}
+
+.contact-details .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details .contact-item i {
+    margin-right: 0.5rem;
+    color: #0d47a1;
+}
+
+.contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #0d47a1;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #08306b;
+    transform: scale(1.05);
+}
+
+.social-links a {
+    color: #0d47a1;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #08306b;
+    transform: scale(1.1);
+}
+
+#daftarKomentar {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+}
+
+#daftarKomentar h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+#daftarKomentar p {
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+#daftarKomentar p strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0d6efd;
+}
+
+/* Footer */
+.footer {
+    background: #e0e0e0;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
