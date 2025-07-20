@@ -41,3 +41,21 @@ function tampilkanKomentar() {
   document.getElementById('subjek').value = '';
   document.getElementById('pesan').value = '';
 }
+
+async function fetchLastUpdate() {
+  const repoOwner = 'fiki-fahrezi';   // Ganti username kamu
+  const repoName = 'findout-aboutvq';        // Ganti nama repo kamu
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`);
+    const data = await response.json();
+
+    const lastCommitDate = new Date(data[0].commit.committer.date);
+    document.getElementById('last-update').innerHTML =
+      'Last updated: ' + lastCommitDate.toLocaleString();
+  } catch (error) {
+    document.getElementById('last-update').innerHTML = 'Last updated: gagal mengambil data';
+  }
+}
+
+fetchLastUpdate();
