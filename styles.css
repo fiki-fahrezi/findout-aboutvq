@@ -336,34 +336,39 @@ section:hover {
     transform: scale(1.1);
 }
 
-#daftarKomentar {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  border-top: 2px solid #ddd;
+/* Style Section Komentar */
+.komentar-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-#daftarKomentar h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #333;
+.komentar-section .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-#daftarKomentar p {
-  background: #f9f9f9;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid #eee;
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #555;
+/* Cusdis default tidak perlu scroll override */
+#cusdis_thread {
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-#daftarKomentar p strong {
-  display: block;
-  margin-bottom: 5px;
-  color: #0d6efd;
+/* Responsive */
+@media (max-width: 768px) {
+    .komentar-section {
+        padding: 20px;
+    }
 }
+
 
 /* Footer */
 .footer {
