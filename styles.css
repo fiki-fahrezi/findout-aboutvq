@@ -373,3 +373,5 @@ section:hover {
     font-size: 0.9rem;
     color: #555;
 }
+
+#disqus_thread>iframe[src*="ads-iframe"] display:none!important
