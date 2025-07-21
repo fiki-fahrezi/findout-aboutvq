@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Fiki Fahrezi</title>
+    <title>Fiki Fahrezi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -183,7 +183,7 @@
                 <h3>Mari Berkolaborasi!</h3>
                 <p>
                     Saya selalu terbuka untuk kesempatan baru, kolaborasi proyek, atau diskusi 
-                    tentang teknik kimia dan pengembangan diri. Jangan ragu untuk menghubungi saya 
+                     dan pengembangan diri. Jangan ragu untuk menghubungi saya 
                     jika Anda tertarik untuk berkolaborasi atau ingin berbagi pengalaman.
                 </p>
                 <div class="contact-details">
@@ -201,30 +201,36 @@
                     </div>
                 </div>
                 <div class="social-links">
-    <a href="https://wa.me/6282140976032" class="social-link" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="mailto:fikifahrezi23@gmail.com" class="social-link">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://instagram.com/fikifahrezi3/" class="social-link">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
+                    <a href="https://wa.me/6282140976032" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:fikifahrezi23@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://instagram.com/fikifahrezi3/" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
 
-<!-- Komentar Cusdis -->
-<h3>Komentar</h3>
-<div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="dd097867-0f82-4bf3-8bc2-dcabb1d7bd7b"
-  data-page-id="homepage"
-  data-page-url="https://fiki-fahrezi.github.io/findout-aboutvq/"
-  data-page-title="Halaman Utama">
-</div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-
-
-
+                <!-- Komentar Disqus -->
+                <h3>Komentar</h3>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = 'https://fiki-fahrezi.github.io/findout-aboutvq/';
+                        this.page.identifier = 'homepage';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://findout-aboutvq.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Silakan aktifkan JavaScript untuk melihat 
+                    <a href="https://disqus.com/?ref_noscript" target="_blank">komentar powered by Disqus</a>.
+                </noscript>
 
             </div>
         </div>
